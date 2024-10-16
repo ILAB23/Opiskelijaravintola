@@ -1,0 +1,106 @@
+-<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Example Vite PWA" />
+    <link
+      rel="apple-touch-icon"
+      href="/icons/icon-192x192.png"
+      sizes="192x192"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>Opiskelijaravintola</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><h5 class="page-title">Opiskelijaravintola</h5></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Restaurant</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div id="theme">
+        <div id="name"></div>
+        <button class="SignBtn" id="signInbtn">Log in</button>
+        <button class="SignBtn" id="signUpbtn">Sign up</button>
+        <button id="t-toggle">
+          <i id="t-icon" class="fas fa-sun"></i>
+        </button>
+      </div>
+    </nav>
+    <section id="authcontent"></section>
+
+    <div id="About">
+      <h2>About Us</h2>
+      <div class="custom-image">
+        <img src="public/lehti (2).jpg" alt="Kuva" />
+        <p class="teksti">
+          Opiskelijaravintola tarjoaa monipuolisen valikoiman ravintoloita ja
+          ruokalistoja, jotta jokainen opiskelija voi löytää itselleen sopivan
+          vaihtoehdon. Olemme sitoutuneet tarjoamaan herkullista ja ravitsevaa
+          ruokaa edullisesti, jotta opiskelijat voivat keskittyä tärkeimpään –
+          opiskeluun. Olitpa vegaani, gluteeniton tai noudatat muuta
+          erityisruokavaliota, meiltä löydät aina turvallisia ja maukkaita
+          vaihtoehtoja. Ravintolamme sijaitsevat kampusten lähellä, ja tarjoamme
+          palvelua useilla kielillä, jotta jokainen löytää omat suosikkinsa
+          helposti.<br />
+
+          <br />
+          Yhteystiedot: <br />
+          Sähköposti: info@opiskelijaravintola.fi<br />
+          Puhelin: 010 123 4567
+        </p>
+      </div>
+
+      <!-- Lisätty neljäs kohta luettelona -->
+
+      <!-- Linkki lomakkeen avaamiseen -->
+      <a href="#" id="toggle-form-link">Anna palautetta</a>
+
+      <!-- Palaute-lomake -->
+      <div class="form-section" id="feedback-form" style="display: none">
+        <form class="form-container">
+          <h2>Anna palautetta</h2>
+          <div class="form-group">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="comments">Palaute:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              placeholder="Kirjoita palautteesi tähän"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Lähetä palaute</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <h4>IA 2024.</h4>
+    </footer>
+    <!-- <script type="module" src="src/Lista.ts" defer></script> -->
+    <script type="module" src="src/main.ts" defer></script>
+  </body>
+</html>

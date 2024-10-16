@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Example Vite PWA" />
+    <link
+      rel="apple-touch-icon"
+      href="/icons/icon-192x192.png"
+      sizes="192x192"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <title>Opiskelijaravintola</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><h5 class="page-title">Opiskelijaravintola</h5></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Restaurant</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="SignBtn">
+        <button class="SignBtn" id="signInbtn">Log in</button>
+        <button class="SignBtn" id="signUpbtn">Sign up</button>
+        <button id="t-toggle">
+          <i id="t-icon" class="fas fa-sun"></i>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section id="authcontent"></section>
+      <section id="search-section">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search restaurants..."
+        />
+        <button id="search-button">Search</button>
+      </section>
+      <section>
+        <div id="tablemap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nimi</th>
+                <th>Yritys</th>
+                <th>Osoite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- restaurants here -->
+            </tbody>
+          </table>
+          <div id="map" style="height: 400px"></div>
+        </div>
+      <section id="content"></section>
+      <dialog>
+        <div>
+          <button id="close-modal">&#215;</button>
+        </div>
+        <div id="daily-weekly-menu">
+          <button id="show-daily-menu">Day Menu</button>
+          <button id="show-weekly-menu">week Menu</button>
+        </div>
+        <div id="daily-menu" class="hidden">Daily Menu Content</div>
+        <div id="weekly-menu" class="hidden">Weekly Menu Content</div>
+        <div id="info">
+          <!-- add restaurant info here when restaurant is clicked -->
+        </div>
+      </dialog>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <footer>
+      <h4>COPY IA 2024.</h4>
+    </footer>
+
+    <script type="module" src="src/Lista.ts" defer></script>
+    <script type="module" src="src/main.ts" defer></script>
+  </body>
+</html>
